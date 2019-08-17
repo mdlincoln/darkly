@@ -1,0 +1,17 @@
+Type: Package
+Package: darkly
+Title: Adapt RStudio to the System Theme
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Matthew",
+           family = "Lincoln",
+           role = c("aut", "cre"),
+           email = "matthew.d.lincoln@gmail.com",
+           comment = c(ORCID = "0000-0002-4387-3384"))
+Description: Detects if the operating system is running in dark
+    or light mode, and adjusts the RStudio editor theme to match.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
