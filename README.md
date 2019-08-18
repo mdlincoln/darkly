@@ -1,30 +1,22 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # darkly
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
-The goal of darkly is to …
+darkly creates dark and light presets for your RStudio editor theme, and will synchronize them on startup with your OS appearance (currently for OS X only).
 
 ## Installation
 
-You can install the development version of darkly from
-[GitHub](https://github.com/) with:
+You can install the development version of darkly from [GitHub](https://github.com/) with:
 
-``` r
+```r
 # install.packages("devtools")
 devtools::install_github("mdlincoln/darkly")
 ```
 
-Run `use_darkly()` to guide the one-time setup process. You will first
-save your preferred theme names to your `.Renviron`, and then setup a
-hook in your `.Rprofile` that will call `darkly_sync()` when starting up
-RStudio.
+Run `use_darkly()` to guide the one-time setup process. You will first save your preferred theme names to your `.Renviron`, and then have the option setup a hook in your `.Rprofile` that will call `darkly_sync()` when starting up RStudio. (Currently available on OS X only.c)
 
-``` r
+```r
 darkly::use_darkly()
 #> ● Paste the following lines into your .Renviron
 #>   DARKLY_LIGHT_THEME=Textmate (default)
@@ -40,3 +32,8 @@ darkly::use_darkly()
 #> ● Modify '/Users/admin/.Rprofile'
 #> ● Restart R for changes to take effect
 ```
+
+darkly also includes RStudio addins to quickly toggle themes:
+
+![darkly RStudio addin](man/figures/darkly.gif)
+
