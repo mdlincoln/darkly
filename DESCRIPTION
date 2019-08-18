@@ -16,6 +16,9 @@ BugReports: https://github.com/mdlincoln/darkly/issues
 Imports: 
     rstudioapi (>= 0.8),
     usethis
+Suggests: 
+    testthat (>= 2.1.0),
+    withr
 Encoding: UTF-8
 Language: en-US
 LazyData: true
