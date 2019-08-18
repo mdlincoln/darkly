@@ -17,7 +17,7 @@ You can install the development version of darkly from [GitHub](https://github.c
 devtools::install_github("mdlincoln/darkly")
 ```
 
-Run `use_darkly()` to guide the one-time setup process. You will first save your preferred theme names to your `.Renviron`, and then have the option setup a hook in your `.Rprofile` that will call `darkly_sync()` when starting up RStudio. (Currently available on OS X only.c)
+Run `use_darkly()` to guide the one-time setup process. You will first save your preferred theme names to your `.Renviron`, and then have the option setup a hook in your `.Rprofile` that will call `darkly_sync()` when starting up RStudio. (Currently available on OS X only.)
 
 ```r
 darkly::use_darkly()
@@ -30,7 +30,7 @@ darkly::use_darkly()
 
 #> ● Paste the following line into your Rprofile
 #>   # On load, synchronize the RStudio editor theme to the OS appearance using the darkly package
-#>   setHook("rstudio.sessionInit", function(newSession) if (require("darkly", quietly = TRUE)) darkly::darkly_sync(), #> action = "append")
+#>   setHook("rstudio.sessionInit", function(newSession) if (interactive() & require("darkly", quietly = TRUE)) darkly::darkly_sync(), #> action = "append")
 #>   [Copied to clipboard]
 #> ● Modify '/Users/admin/.Rprofile'
 #> ● Restart R for changes to take effect
