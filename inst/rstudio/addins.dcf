@@ -1,6 +1,11 @@
 Name: Toggle editor theme
-Description: Copies the results of a selected expression to the system clipboard
+Description: Toggles editor theme between light and dark
 Binding: darkly_toggle
+Interactive: false
+
+Name: Sync editor theme
+Description: Syncs the editor theme to the OS appearance (Currently on OS X only)
+Binding: darkly_sync
 Interactive: false
 
 Name: Activate light theme
