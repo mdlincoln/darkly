@@ -11,9 +11,9 @@
 #' @export
 use_darkly <- function(light_theme = "Textmate (default)", dark_theme = "Solarized Dark") {
   setup_darkly_environ(light_theme, dark_theme)
-  renv_edit_res <- usethis::ui_yeah("Have you finished editing your .Renviron?")
 
-  if (renv_edit_res) {
+  add_environ <- usethis::ui_yeah("Sync theme on RStudio startup? (Currently available for OS X only)")
+  if (add_environ) {
     setup_darkly_profile()
   } else {
     message("Quitting darkly initialization. To start again, re-run darkly::use_darkly()")
