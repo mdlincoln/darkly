@@ -3,6 +3,7 @@
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build status](https://travis-ci.org/mdlincoln/darkly.svg?branch=master)](https://travis-ci.org/mdlincoln/darkly)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/mdlincoln/darkly?branch=master&svg=true)](https://ci.appveyor.com/project/mdlincoln/darkly)
 <!-- badges: end -->
 
 darkly creates dark and light presets for your RStudio editor theme, and will synchronize them on startup with your OS appearance (currently for OS X only).
