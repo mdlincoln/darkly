@@ -107,6 +107,10 @@ get_mac_appearance <- function() {
 # TODO read some kind of registry setting with readRegistry
 get_windows_appearance <- function() {
   message("Windows is not yet supported by darkly")
+  # win_theme <- readRegistry("\SOFTWARE\Microsoft\WindowsCurrentVersion\Themes\Personalize\AppsUseLightTheme", hive = "HCU", view = "32-bit")
+  # if (win_theme == "0")
+  #   return("dark")
+  # return("light")
 }
 
 get_X11_appearance <- function() {
