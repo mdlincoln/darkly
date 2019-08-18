@@ -14,7 +14,7 @@ License: MIT + file LICENSE
 URL: https://github.com/mdlincoln/darkly
 BugReports: https://github.com/mdlincoln/darkly/issues
 Imports: 
-    rstudioapi,
+    rstudioapi (>= 1.2.879),
     usethis
 Encoding: UTF-8
 Language: en-US
