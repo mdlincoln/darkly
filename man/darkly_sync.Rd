@@ -2,25 +2,35 @@
 % Please edit documentation in R/sync.R
 \name{darkly_sync}
 \alias{darkly_sync}
-\alias{darkly_light}
-\alias{darkly_dark}
+\alias{get_light_theme}
+\alias{get_dark_theme}
+\alias{set_light}
+\alias{set_dark}
 \title{Synchronize RStudio theme with OS appearance}
 \usage{
 darkly_sync()
 
-darkly_light()
+get_light_theme()
 
-darkly_dark()
+get_dark_theme()
+
+set_light()
+
+set_dark()
 }
 \description{
 Synchronize RStudio theme with OS appearance
 }
 \section{Functions}{
 \itemize{
-\item \code{darkly_sync}: Gets the OS appearance and applys the selected RStudio editor theme
+\item \code{darkly_sync}: Gets the OS appearance and applies the selected RStudio editor theme
 
-\item \code{darkly_light}: Set default light theme
+\item \code{get_light_theme}: Reads the darkly light theme
 
-\item \code{darkly_dark}: Set default dark theme
+\item \code{get_dark_theme}: Reads the darkly dark theme
+
+\item \code{set_light}: Set RStudio editor to the darkly light theme
+
+\item \code{set_dark}: Set RStudio editor to the darkly dark theme
 }}
 
