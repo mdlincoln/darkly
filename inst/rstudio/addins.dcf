@@ -1,0 +1,14 @@
+Name: Toggle editor theme
+Description: Copies the results of a selected expression to the system clipboard
+Binding: darkly_toggle
+Interactive: false
+
+Name: Activate light theme
+Description: Activate the light RStudio theme
+Binding: set_light
+Interactive: false
+
+Name: Activate dark theme
+Description: Activate the dark RStudio theme
+Binding: set_dark
+Interactive: false
