@@ -34,7 +34,7 @@ setup_darkly_environ <- function(light_theme, dark_theme) {
 #' @noRd
 setup_darkly_profile <- function() {
   usethis::ui_todo("Paste the following line into your Rprofile")
-  check_command <- c("# On load, synchronize the RStudio editor theme to the OS appearance using the darkly package", 
+  check_command <- c("# On load, synchronize the RStudio editor theme to the OS appearance using the darkly package",
     "setHook(\"rstudio.sessionInit\", function(newSession) if (require(\"darkly\", quietly = TRUE)) darkly::darkly_sync(), action = \"append\")")
   usethis::ui_code_block(check_command)
   usethis::edit_r_profile()
