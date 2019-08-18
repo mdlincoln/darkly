@@ -10,9 +10,9 @@
 #' @return NULL
 #' @export
 use_darkly <- function(light_theme = "Textmate (default)", dark_theme = "Solarized Dark") {
-  setup_darkly_environ()
+  setup_darkly_environ(light_theme, dark_theme)
   renv_edit_res <- usethis::ui_yeah("Have you finished editing your .Renviron?")
-  
+
   if (renv_edit_res) {
     setup_darkly_profile()
   } else {
