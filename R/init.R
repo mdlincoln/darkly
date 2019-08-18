@@ -24,7 +24,7 @@ use_darkly <- function(light_theme = "Textmate (default)", dark_theme = "Solariz
 #' Guides user through envvar setup
 #' @noRd
 setup_darkly_environ <- function(light_theme, dark_theme) {
-  envirs <- c(glue::glue("DARKLY_LIGHT_THEME={light_theme}"), glue::glue("DARKLY_DARK_THEME={dark_theme}"))
+  envirs <- c(paste0("DARKLY_LIGHT_THEME=", light_theme), paste0("DARKLY_DARK_THEME=", dark_theme))
   usethis::ui_todo("Paste the following lines into your .Renviron")
   usethis::ui_code_block(envirs)
   usethis::edit_r_environ()
