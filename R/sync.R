@@ -7,7 +7,7 @@ NULL
 #' @describeIn darkly_sync Gets the OS appearance and applies the selected RStudio editor theme
 darkly_sync <- function() {
   if (!rstudioapi::isAvailable(version_needed = "1.2.879")) {
-    message("rstudioapi is not available. darkly_sync will do nothing")
+    warning("rstudioapi is not available. darkly_sync will do nothing")
     return(invisible())
   }
 
@@ -50,7 +50,7 @@ darkly_toggle <- function() {
 get_light_theme <- function() {
   light_theme <- Sys.getenv("DARKLY_LIGHT_THEME")
   if (!nzchar(light_theme)) {
-    message("DARKLY_LIGHT_THEME is not set in your .Renviron. Run darkly::use_darkly() to install it.")
+    warning("DARKLY_LIGHT_THEME is not set in your .Renviron. Run darkly::use_darkly() to install it.")
     return(NULL)
   }
   light_theme
@@ -61,7 +61,7 @@ get_light_theme <- function() {
 get_dark_theme <- function() {
   dark_theme <- Sys.getenv("DARKLY_DARK_THEME")
   if (!nzchar(dark_theme)) {
-    message("DARKLY_DARK_THEME is not set in your .Renviron. Run darkly::use_darkly() to install it.")
+    warning("DARKLY_DARK_THEME is not set in your .Renviron. Run darkly::use_darkly() to install it.")
     return(NULL)
   }
   dark_theme
@@ -106,7 +106,7 @@ get_mac_appearance <- function() {
 
 # TODO read some kind of registry setting with readRegistry
 get_windows_appearance <- function() {
-  message("Windows is not yet supported by darkly")
+  warning("Windows is not yet supported by darkly")
   # win_theme <- readRegistry("\SOFTWARE\Microsoft\WindowsCurrentVersion\Themes\Personalize\AppsUseLightTheme", hive = "HCU", view = "32-bit")
   # if (win_theme == "0")
   #   return("dark")
@@ -114,5 +114,5 @@ get_windows_appearance <- function() {
 }
 
 get_X11_appearance <- function() {
-  message("X11 systems are not yet supported by darkly")
+  warning("X11 systems are not yet supported by darkly")
 }
