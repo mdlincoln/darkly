@@ -1,6 +1,7 @@
 # darkly
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
 darkly creates dark and light presets for your RStudio editor theme, and will synchronize them on startup with your OS appearance (currently for OS X only).
