@@ -10,9 +10,9 @@ darkly_sync <- function() {
     message("rstudioapi is not available. darkly_sync will do nothing")
     return(invisible())
   }
-  
+
   os_appearance <- get_os_appearance()
-  
+
   if (os_appearance == "light") {
     set_light()
   } else if (os_appearance == "dark") {
@@ -24,7 +24,7 @@ darkly_sync <- function() {
 #'
 #' This does not check the system at all, but merely swaps between the specified
 #' dark and light theme. If the editor theme has been set to a theme other than
-#' the ones sepcified by the `DARKLY_LIGHT_THEME` and `DARKLY_DARK_THEME`
+#' the ones specified by the `DARKLY_LIGHT_THEME` and `DARKLY_DARK_THEME`
 #' environment variables, darkly_toggle() will change the appearance to the
 #' light theme.
 #'
@@ -32,9 +32,9 @@ darkly_sync <- function() {
 darkly_toggle <- function() {
   light_theme <- get_light_theme()
   dark_theme <- get_dark_theme()
-  if (is.null(light_theme) || is.null(dark_theme)) 
+  if (is.null(light_theme) || is.null(dark_theme))
     return()
-  
+
   if (rstudioapi::isAvailable()) {
     current_theme <- rstudioapi::getThemeInfo()["editor"]
     if (current_theme == light_theme) {
@@ -71,7 +71,7 @@ get_dark_theme <- function() {
 #' @export
 set_light <- function() {
   light_theme <- get_light_theme()
-  if (!is.null(light_theme)) 
+  if (!is.null(light_theme))
     rstudioapi::applyTheme(light_theme)
 }
 
@@ -79,7 +79,7 @@ set_light <- function() {
 #' @export
 set_dark <- function() {
   dark_theme <- get_dark_theme()
-  if (!is.null(dark_theme)) 
+  if (!is.null(dark_theme))
     rstudioapi::applyTheme(dark_theme)
 }
 
@@ -90,16 +90,16 @@ set_dark <- function() {
 #' @noRd
 get_os_appearance <- function() {
   sys <- Sys.info()["sysname"]
-  
+
   get_appearance <- switch(sys, Darwin = get_mac_appearance, Windows = get_windows_appearance, get_X11_appearance)
   get_appearance()
 }
 
 get_mac_appearance <- function() {
-  suppressWarnings(mac_theme <- system2("defaults", args = c("read -g AppleInterfaceStyle"), stdout = TRUE, 
+  suppressWarnings(mac_theme <- system2("defaults", args = c("read -g AppleInterfaceStyle"), stdout = TRUE,
     stderr = TRUE))
-  if (length(mac_theme) > 0) 
-    if (mac_theme[1] == "Dark") 
+  if (length(mac_theme) > 0)
+    if (mac_theme[1] == "Dark")
       return("dark")
   return("light")
 }

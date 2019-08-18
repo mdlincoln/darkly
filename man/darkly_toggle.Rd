@@ -9,7 +9,7 @@ darkly_toggle()
 \description{
 This does not check the system at all, but merely swaps between the specified
 dark and light theme. If the editor theme has been set to a theme other than
-the ones sepcified by the \code{DARKLY_LIGHT_THEME} and \code{DARKLY_DARK_THEME}
+the ones specified by the \code{DARKLY_LIGHT_THEME} and \code{DARKLY_DARK_THEME}
 environment variables, darkly_toggle() will change the appearance to the
 light theme.
 }
